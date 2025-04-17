@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PomoZoo Privacy Policy</title>
+  <title>PomoZoo - Pomodoro Timer App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #1a1a1a;
-      --text-color: #333;
-      --bg-color: #f8fafc;
-      --accent-color: #2563eb;
+      --primary-color: #1A4D2E;
+      --secondary-color: #F0BB62;
+      --text-color: #FFFFFF;
+      --dark-text: #333333;
+      --section-bg: #F5F5F5;
     }
 
     * {
@@ -19,42 +23,162 @@
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.7;
-      color: var(--text-color);
-      background-color: var(--bg-color);
+      color: var(--dark-text);
+      background-color: white;
     }
 
-    h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--primary-color);
+    header {
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      padding: 5rem 1.5rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
       margin-bottom: 1.5rem;
     }
 
-    h2 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--primary-color);
-      margin: 2rem 0 1rem;
-    }
-
-    p {
-      font-size: 1rem;
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
       margin-bottom: 1rem;
     }
 
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem;
+      color: var(--primary-color);
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      font-weight: 600;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .features {
+      padding: 5rem 0;
+      text-align: center;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .feature-item {
+      padding: 2rem;
+      border-radius: 10px;
+      background-color: var(--section-bg);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    .screenshots {
+      padding: 5rem 0;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      text-align: center;
+    }
+
+    .screenshots-container {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 3rem;
+      overflow-x: auto;
+      padding: 1.5rem 0;
+    }
+
+    .screenshot {
+      width: 220px;
+      border-radius: 25px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .screenshot:hover {
+      transform: translateY(-15px);
+    }
+
+    .privacy {
+      padding: 5rem 0;
+    }
+
+    .privacy-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--section-bg);
+      padding: 3rem;
+      border-radius: 15px;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      text-align: center;
+      padding: 2rem 0;
+    }
+
     a {
-      color: var(--accent-color);
+      color: var(--secondary-color);
       text-decoration: none;
       transition: color 0.2s ease;
     }
 
     a:hover {
-      color: #1e40af;
       text-decoration: underline;
     }
 
@@ -64,62 +188,107 @@
       margin-bottom: 2rem;
     }
 
-    section {
-      margin-bottom: 2rem;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 2rem 1rem;
+    @media (max-width: 768px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
       }
-
-      h1 {
-        font-size: 1.75rem;
+      
+      .screenshots-container {
+        flex-direction: column;
+        align-items: center;
       }
-
-      h2 {
-        font-size: 1.125rem;
+      
+      .screenshot {
+        width: 280px;
+      }
+      
+      .privacy-container {
+        padding: 2rem 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>PomoZoo Privacy Policy</h1>
-  <p class="effective-date"><strong>Effective date:</strong> [12.04.2025]</p>
+  <header>
+    <div class="container">
+      <img src="assets/images/app_icon.png" alt="PomoZoo App Icon" class="logo">
+      <h1>PomoZoo</h1>
+      <p class="tagline">Stay Focused, Build Your Zoo</p>
+      <p>A playful Pomodoro timer app that helps you maintain focus and productivity while building your virtual zoo.</p>
+      <a href="https://apps.apple.com/app/pomozoo/id123456789" class="cta-button">Download on the App Store - £1.99</a>
+    </div>
+  </header>
 
-  <section>
-    <h2>1. No Personal Data Collected</h2>
-    <p>PomoZoo does not collect, store, or transmit any personal or sensitive data. The app is designed to function entirely without requiring user information such as names, emails, or location data.</p>
+  <section class="features">
+    <div class="container">
+      <h2>What Makes PomoZoo Special?</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <div class="feature-icon">🎯</div>
+          <h3>Stay Focused</h3>
+          <p>Use the Pomodoro technique to enhance your concentration and minimize distractions.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🦁</div>
+          <h3>Build Your Zoo</h3>
+          <p>Collect animals for your virtual zoo with each completed focus session.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📊</div>
+          <h3>Track Progress</h3>
+          <p>Get insights into your focus habits and productivity patterns.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>2. Local Device Storage</h2>
-    <p>All app-related data, such as settings or timers, is stored locally on your device. This data never leaves your device or is shared with anyone, including the developers.</p>
+  <section class="screenshots">
+    <div class="container">
+      <h2>See PomoZoo in Action</h2>
+      <div class="screenshots-container">
+        <img src="assets/images/screenshot1.png" alt="PomoZoo Timer Screen" class="screenshot">
+        <img src="assets/images/screenshot2.png" alt="PomoZoo Features Screen" class="screenshot">
+        <img src="assets/images/screenshot3.png" alt="PomoZoo Zoo Screen" class="screenshot">
+        <img src="assets/images/screenshot4.png" alt="PomoZoo Stats Screen" class="screenshot">
+        <img src="assets/images/screenshot5.png" alt="PomoZoo Settings Screen" class="screenshot">
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>3. User Control</h2>
-    <p>You have full control over your app data. Data can be reset or cleared directly within the app at any time.</p>
+  <section class="privacy">
+    <div class="container">
+      <h2>Privacy Policy</h2>
+      <div class="privacy-container">
+        <p class="effective-date"><strong>Effective date:</strong> 12.04.2025</p>
+
+        <h3>1. No Personal Data Collected</h3>
+        <p>PomoZoo does not collect, store, or transmit any personal or sensitive data. The app is designed to function entirely without requiring user information such as names, emails, or location data.</p>
+
+        <h3>2. Local Device Storage</h3>
+        <p>All app-related data, such as settings or timers, is stored locally on your device. This data never leaves your device or is shared with anyone, including the developers.</p>
+
+        <h3>3. User Control</h3>
+        <p>You have full control over your app data. Data can be reset or cleared directly within the app at any time.</p>
+
+        <h3>4. No Tracking or Cookies</h3>
+        <p>PomoZoo does not use cookies, tracking tools, or analytics technologies in the app or on our website.</p>
+
+        <h3>5. Legal Compliance</h3>
+        <p>While PomoZoo does not collect data, we aim to comply with privacy regulations such as GDPR and CCPA through complete data minimization by design.</p>
+
+        <h3>6. Changes to This Policy</h3>
+        <p>Any updates to this privacy policy will be posted on this website. We encourage you to check periodically for changes.</p>
+
+        <h3>7. Contact</h3>
+        <p>If you have questions or concerns about this privacy policy, please contact us at <a href="mailto:appstoremerchant2002@gmail.com">appstoremerchant2002@gmail.com</a>.</p>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>4. No Tracking or Cookies</h2>
-    <p>PomoZoo does not use cookies, tracking tools, or analytics technologies in the app or on our website.</p>
-  </section>
-
-  <section>
-    <h2>5. Legal Compliance</h2>
-    <p>While PomoZoo does not collect data, we aim to comply with privacy regulations such as GDPR and CCPA through complete data minimization by design.</p>
-  </section>
-
-  <section>
-    <h2>6. Changes to This Policy</h2>
-    <p>Any updates to this privacy policy will be posted on this website. We encourage you to check periodically for changes.</p>
-  </section>
-
-  <section>
-    <h2>7. Contact</h2>
-    <p>If you have questions or concerns about this privacy policy, please contact us at <a href="mailto:appstoremerchant2002@gmail.com">appstoremerchant2002@gmail.com</a>.</p>
-  </section>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Thomas Evans. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
